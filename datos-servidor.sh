@@ -35,11 +35,11 @@ uname -m >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Virtualización (Intel-VT): " >> /tmp/datos-servidor.txt
-grep -i vmx /proc/cpuinfo  >> /tmp/datos-servidor.txt
+grep --color vmx  /proc/cpuinfo  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Virtualización (AMD-V): " >> /tmp/datos-servidor.txt
-grep -i svm /proc/cpuinfo  >> /tmp/datos-servidor.txt
+grep --color svm /proc/cpuinfo  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Particiones y medios de almacenamiento: " >> /tmp/datos-servidor.txt
