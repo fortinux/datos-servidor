@@ -57,7 +57,8 @@ echo " " >> /tmp/datos-servidor.txt
 
 echo "****** SOFTWARE ******" >> /tmp/datos-servidor.txt
 echo "Nombre y versión del kernel: " >> /tmp/datos-servidor.txt
-uname -sr  >> /tmp/datos-servidor.txt
+# uname -sr  >> /tmp/datos-servidor.txt
+cat /proc/version >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Módulos del kernel cargados al inicio: " >> /tmp/datos-servidor.txt
@@ -66,6 +67,10 @@ echo " " >> /tmp/datos-servidor.txt
 
 echo "Listar todos los módulos que cargó el sistema: " >> /tmp/datos-servidor.txt
 lsmod  >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Sistema operativo: " >> /tmp/datos-servidor.txt
+cat /etc/os-release  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Distribución: " >> /tmp/datos-servidor.txt
