@@ -21,25 +21,10 @@ echo "SKU (Stock Keeping Unit) ó P/N (Part Number) del producto: " >> /tmp/dato
 sudo dmidecode | grep -i sku >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
-# echo "Más información detallada: " >> /tmp/datos-servidor.txt
-# sudo dmidecode >> /tmp/datos-servidor.txt
-
-echo "Procesador: fabricante, modelo, y velocidad " >> /tmp/datos-servidor.txt
-grep 'vendor_id' /proc/cpuinfo >> /tmp/datos-servidor.txt
+echo "Procesador: fabricante, modelo y velocidad " >> /tmp/datos-servidor.txt
 grep 'model name' /proc/cpuinfo >> /tmp/datos-servidor.txt
-grep 'cpu MHz' /proc/cpuinfo  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
-
-echo "Mostrar el tipo de máquina: " >> /tmp/datos-servidor.txt
-uname -m >> /tmp/datos-servidor.txt
-echo " " >> /tmp/datos-servidor.txt
-
-echo "Virtualización (Intel-VT): " >> /tmp/datos-servidor.txt
-grep --color vmx  /proc/cpuinfo  >> /tmp/datos-servidor.txt
-echo " " >> /tmp/datos-servidor.txt
-
-echo "Virtualización (AMD-V): " >> /tmp/datos-servidor.txt
-grep --color svm /proc/cpuinfo  >> /tmp/datos-servidor.txt
+lscpu >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
 echo "Particiones y medios de almacenamiento: " >> /tmp/datos-servidor.txt
@@ -57,7 +42,6 @@ echo " " >> /tmp/datos-servidor.txt
 
 echo "****** SOFTWARE ******" >> /tmp/datos-servidor.txt
 echo "Nombre y versión del kernel: " >> /tmp/datos-servidor.txt
-# uname -sr  >> /tmp/datos-servidor.txt
 cat /proc/version >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
