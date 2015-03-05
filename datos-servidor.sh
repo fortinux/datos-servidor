@@ -69,7 +69,7 @@ echo "Tiempo total encendido: " >> /tmp/datos-servidor.txt
 uptime  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
-echo "****** REDE ************" >> /tmp/datos-servidor.txt
+echo "****** RED *************" >> /tmp/datos-servidor.txt
 
 echo "Resolución de Nombres de Dominio: " >> /tmp/datos-servidor.txt
 sudo cat /etc/resolv.conf >> /tmp/datos-servidor.txt
