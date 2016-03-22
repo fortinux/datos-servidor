@@ -69,9 +69,9 @@ echo "Tiempo total encendido: " >> /tmp/datos-servidor.txt
 uptime  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
-echo "****** RED *************" >> /tmp/datos-servidor.txt
+echo "****** RED ******" >> /tmp/datos-servidor.txt
 
-echo "Resolución de Nombres de Dominio: " >> /tmp/datos-servidor.txt
+echo "Resolución de Nombres de Dominio (DNS): " >> /tmp/datos-servidor.txt
 sudo cat /etc/resolv.conf >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
@@ -85,4 +85,13 @@ echo " " >> /tmp/datos-servidor.txt
 
 echo "Direcciones IP locales de las tarjetas de red: " >> /tmp/datos-servidor.txt
 sudo ifconfig >> /tmp/datos-servidor.txt
-echo "Fin"
+
+echo "****** HTTP HEAD ******" >> /tmp/datos-servidor.txt
+
+echo "Resultado: " >> /tmp/datos-servidor.txt
+echo -n "Escriba la dirección web de la aplicación (por ej. http://wwww.miweb.com): "
+read direccionweb
+sudo curl -X HEAD -i $direccionweb >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+echo "****** .-. ******" >> /tmp/datos-servidor.txt
+echo "FIN"
