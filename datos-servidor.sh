@@ -61,6 +61,50 @@ echo "Distribución: " >> /tmp/datos-servidor.txt
 lsb_release -idc  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
 
+echo "Versión Apache instalada" >> /tmp/datos-servidor.txt
+apache2 -v >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión Nginx instalada" >> /tmp/datos-servidor.txt
+nginx -V >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión Java instalada" >> /tmp/datos-servidor.txt
+java -version >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Path de Java" >> /tmp/datos-servidor.txt
+which java >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión PHP instalada" >> /tmp/datos-servidor.txt
+php -v >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "PHP ini" >> /tmp/datos-servidor.txt
+php --ini >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión Python instalada" >> /tmp/datos-servidor.txt
+python --version >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión Ruby instalada" >> /tmp/datos-servidor.txt
+ruby -v >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt 
+
+echo "Versión Rails instalada" >> /tmp/datos-servidor.txt
+rails -v >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt
+
+echo "Versión MySQL instalada" >> /tmp/datos-servidor.txt 
+mysql -h localhost -V >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt 
+
+echo "Versión PosgreSQL instalada" >> /tmp/datos-servidor.txt
+psql --version >> /tmp/datos-servidor.txt
+echo " " >> /tmp/datos-servidor.txt 
+
 echo "Nombre del equipo: " >> /tmp/datos-servidor.txt
 echo $HOSTNAME  >> /tmp/datos-servidor.txt
 echo " " >> /tmp/datos-servidor.txt
